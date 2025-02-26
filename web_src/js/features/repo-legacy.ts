@@ -71,7 +71,7 @@ export function initRepository() {
     initRepoIssueDependencyDelete();
     initRepoIssueCodeCommentCancel();
     initRepoPullRequestUpdate();
-    initCompReactionSelector();
+    // initCompReactionSelector();
 
     initRepoPullRequestMergeForm();
     initRepoPullRequestCommitStatus();

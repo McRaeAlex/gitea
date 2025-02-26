@@ -3,12 +3,17 @@ import {fomanticQuery} from '../../modules/fomantic/base.ts';
 import type {DOMEvent} from '../../utils/dom.ts';
 
 export function initCompReactionSelector(parent: ParentNode = document) {
+  console.info(parent);
   for (const container of parent.querySelectorAll<HTMLElement>('.issue-content, .diff-file-body')) {
+    console.log('container', container);
     container.addEventListener('click', async (e: DOMEvent<MouseEvent>) => {
+      console.log('ran');
       // there are 2 places for the "reaction" buttons, one is the top-right reaction menu, one is the bottom of the comment
       const target = e.target.closest('.comment-reaction-button');
+      console.info('target', target);
       if (!target) return;
       e.preventDefault();
+
 
       if (target.classList.contains('disabled')) return;
 
